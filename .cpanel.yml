@@ -2,4 +2,9 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/user/public_html/
+    - /bin/cp -R component $DEPLOYPATH
     - /bin/cp -R images $DEPLOYPATH
+    - /bin/cp -R templates $DEPLOYPATH
+    - /bin/cp -R media $DEPLOYPATH
+    - /bin/cp index.php $DEPLOYPATH
+    - /bin/cp robots.ssl.txt $DEPLOYPATH
