@@ -47,7 +47,11 @@
 	<script type="text/javascript">
 jQuery(window).on('load',  function() {
 				new JCaption('img.caption');
-			});if (typeof RokBoxSettings == 'undefined') RokBoxSettings = {pc: '100'};
+			});
+if (typeof RokBoxSettings == 'undefined') RokBoxSettings = {pc: '100'};
+
+
+
 var RSFormProReCAPTCHAv2 = {
 	loaders: [],
 	onLoad: function() {
@@ -75,7 +79,8 @@ if (typeof jQuery !== 'undefined') {
 		RSFormProReCAPTCHAv2.onLoad();
 	});
 }
-
+
+
 					RSFormProReCAPTCHAv2.loaders.push(function(){
 						grecaptcha.render('g-recaptcha-36', {
 							'sitekey': '6LcIbBsTAAAAAP0MsquvnX-VeluGVndUl9ExTnxd',
@@ -84,7 +89,8 @@ if (typeof jQuery !== 'undefined') {
 							'size': 'normal'
 						});
 					});
-				jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
+				
+jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });
 	</script>
 
 </head>
@@ -254,76 +260,63 @@ if (typeof jQuery !== 'undefined') {
 	           		                	<div class="module-content">
 	                		
 <div class="rsformcontactform rt-email-form box2">
-	<form method="post"  id="userForm" action="contact-us.html"><fieldset class="formFieldset">
+	<form method="post"  id="userForm" action="../php/email.php"><fieldset class="formFieldset">
 		<legend></legend>
 		
 		<!-- Do not remove this ID, it is used to identify the page so that the pagination script can work correctly -->
 	<ol class="formContainer" id="rsform_3_page_0">
 		<li class="rsform-block rsform-block-full-name">
 			<div class="formCaption2"></div>
-			<div class="formBody"><input type="text" value="" size="20" name="form[Full Name]" id="Full Name" placeholder="Full Name" class="rsform-input-box" /><span class="formClr"><span id="component23" class="formNoError">Invalid Input</span></span></div>
+			<div class="formBody"><input type="text" value="" size="20" name="fullName" id="Full Name" placeholder="Full Name" class="rsform-input-box" /><span class="formClr"><span id="component23" class="formNoError">Invalid Input</span></span></div>
 			<div class="formDescription"></div>
 		</li>
 		<li class="rsform-block rsform-block-your-email">
 			<div class="formCaption2"></div>
-			<div class="formBody"><input type="text" value="" size="200" name="form[Your Email]" id="Your Email" placeholder="Your Email" class="rsform-input-box" /><span class="formClr"><span id="component24" class="formNoError">Invalid Input</span></span></div>
+			<div class="formBody"><input type="text" value="" size="200" name="email" id="Your Email" placeholder="Your Email" class="rsform-input-box" /><span class="formClr"><span id="component24" class="formNoError">Invalid Input</span></span></div>
 			<div class="formDescription"></div>
 		</li>
 		<li class="rsform-block rsform-block-phone-number">
 			<div class="formCaption2"></div>
-			<div class="formBody"><input type="text" value="" size="20" name="form[Phone Number]" id="Phone Number" placeholder="Phone Number" class="rsform-input-box" /><span class="formClr"><span id="component25" class="formNoError">Invalid Input</span></span></div>
+			<div class="formBody"><input type="text" value="" size="20" name="phone" id="Phone Number" placeholder="Phone Number" class="rsform-input-box" /><span class="formClr"><span id="component25" class="formNoError">Invalid Input</span></span></div>
 			<div class="formDescription"></div>
 		</li>
 		<li class="rsform-block rsform-block-services">
 			<div class="formCaption2">I'm seeking these services</div>
-			<div class="formBody"><select name="form[services][]" id="services" placeholder="I'm seeking these services" class="rsform-select-box"><option value="Individual counseling for adults">Individual counseling for adults</option><option value="Couples counseling">Couples counseling</option><option value="Family therapy">Family therapy</option><option value="Veteran counseling">Veteran counseling</option><option value="Adolescent counseling">Adolescent counseling</option><option value="Child counseling">Child counseling</option><option value="Other">Other</option></select><span class="formClr"><span id="component27" class="formNoError">Invalid Input</span></span></div>
+			<div class="formBody"><select name="service" id="services" placeholder="I'm seeking these services" class="rsform-select-box"><option value="Individual counseling for adults">Individual counseling for adults</option><option value="Couples counseling">Couples counseling</option><option value="Family therapy">Family therapy</option><option value="Veteran counseling">Veteran counseling</option><option value="Adolescent counseling">Adolescent counseling</option><option value="Child counseling">Child counseling</option><option value="Other">Other</option></select><span class="formClr"><span id="component27" class="formNoError">Invalid Input</span></span></div>
 			<div class="formDescription"></div>
 		</li>
 		<li class="rsform-block rsform-block-malefemale">
 			<div class="formCaption2">Would your prefer a male or female counselor</div>
-			<div class="formBody"><input type="radio"  name="form[malefemale]" value="male" id="malefemale0" class="rsform-radio" /><label for="malefemale0">male</label><input type="radio"  name="form[malefemale]" value="female" id="malefemale1" class="rsform-radio" /><label for="malefemale1">female</label><input type="radio"  name="form[malefemale]" value="no preference " id="malefemale2" class="rsform-radio" /><label for="malefemale2">no preference </label><span class="formClr"><span id="component30" class="formNoError">Invalid Input</span></span></div>
+			<div class="formBody"><input type="radio"  name="counselorGender" value="male" id="malefemale0" class="rsform-radio" /><label for="malefemale0">male</label><input type="radio"  name="form[malefemale]" value="female" id="malefemale1" class="rsform-radio" /><label for="malefemale1">female</label><input type="radio"  name="form[malefemale]" value="no preference " id="malefemale2" class="rsform-radio" /><label for="malefemale2">no preference </label><span class="formClr"><span id="component30" class="formNoError">Invalid Input</span></span></div>
 			<div class="formDescription"></div>
 		</li>
 		<li class="rsform-block rsform-block-day-of-the-week">
 			<div class="formCaption2"></div>
-			<div class="formBody"><input type="text" value="" name="form[day of the week]" id="day of the week" placeholder="What day of the week is the best day for you to schedule your appointments" class="rsform-input-box" /><span class="formClr"><span id="component31" class="formNoError">Invalid Input</span></span></div>
+			<div class="formBody"><input type="text" value="" name="day" id="day of the week" placeholder="What day of the week is the best day for you to schedule your appointments" class="rsform-input-box" /><span class="formClr"><span id="component31" class="formNoError">Invalid Input</span></span></div>
 			<div class="formDescription"></div>
 		</li>
 		<li class="rsform-block rsform-block-ampm">
 			<div class="formCaption2">Are A.M. or P.M. appointments more convenients</div>
-			<div class="formBody"><input type="checkbox"  name="form[ampm][]" value="A.M." id="ampm0" class="rsform-checkbox" /><label for="ampm0">A.M.</label><input type="checkbox"  name="form[ampm][]" value="P.M." id="ampm1" class="rsform-checkbox" /><label for="ampm1">P.M.</label><span class="formClr"><span id="component32" class="formNoError">Invalid Input</span></span></div>
+			<div class="formBody"><input type="checkbox"  name="time" value="A.M." id="ampm0" class="rsform-checkbox" /><label for="ampm0">A.M.</label><input type="checkbox"  name="form[ampm][]" value="P.M." id="ampm1" class="rsform-checkbox" /><label for="ampm1">P.M.</label><span class="formClr"><span id="component32" class="formNoError">Invalid Input</span></span></div>
 			<div class="formDescription"></div>
 		</li>
 		<li class="rsform-block rsform-block-currentpast">
 			<div class="formCaption2">Are you a current past or new client</div>
-			<div class="formBody"><input type="checkbox"  name="form[currentpast][]" value="Current" id="currentpast0" class="rsform-checkbox" /><label for="currentpast0">Current</label><input type="checkbox"  name="form[currentpast][]" value="Past" id="currentpast1" class="rsform-checkbox" /><label for="currentpast1">Past</label><input type="checkbox"  name="form[currentpast][]" value="New" id="currentpast2" class="rsform-checkbox" /><label for="currentpast2">New</label><span class="formClr"><span id="component33" class="formNoError">Invalid Input</span></span></div>
+			<div class="formBody"><input type="checkbox"  name="clientStatus" value="Current" id="currentpast0" class="rsform-checkbox" /><label for="currentpast0">Current</label><input type="checkbox"  name="form[currentpast][]" value="Past" id="currentpast1" class="rsform-checkbox" /><label for="currentpast1">Past</label><input type="checkbox"  name="form[currentpast][]" value="New" id="currentpast2" class="rsform-checkbox" /><label for="currentpast2">New</label><span class="formClr"><span id="component33" class="formNoError">Invalid Input</span></span></div>
 			<div class="formDescription"></div>
 		</li>
 		<li class="rsform-block rsform-block-additional-message">
 			<div class="formCaption2">Please leave more information if you would like</div>
-			<div class="formBody"><textarea cols="70" rows="10" name="form[additional message]" id="additional message" class="rsform-text-box"></textarea><span class="formClr"><span id="component34" class="formNoError">Invalid Input</span></span></div>
+			<div class="formBody"><textarea cols="70" rows="10" name="message" id="additional message" class="rsform-text-box"></textarea><span class="formClr"><span id="component34" class="formNoError">Invalid Input</span></span></div>
 			<div class="formDescription"></div>
 		</li>
-		<li class="rsform-block rsform-block-are-you-a-human">
-			<div class="formCaption2"></div>
-			<div class="formBody"><div id="g-recaptcha-36"></div>
-					<noscript>
-					  <div style="width: 302px; height: 352px;">
-						<div style="width: 302px; height: 352px; position: relative;">
-						  <div style="width: 302px; height: 352px; position: absolute;">
-							<iframe src="https://www.google.com/recaptcha/api/fallback?k=6LcIbBsTAAAAAP0MsquvnX-VeluGVndUl9ExTnxd" frameborder="0" scrolling="no" style="width: 302px; height:352px; border-style: none;"></iframe>
-						  </div>
-						  <div style="width: 250px; height: 80px; position: absolute; border-style: none; bottom: 21px; left: 25px; margin: 0px; padding: 0px; right: 25px;">
-							<textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 80px; border: 1px solid #c1c1c1; margin: 0px; padding: 0px; resize: none;" value=""></textarea>
-						  </div>
-						</div>
-					  </div>
-					</noscript><span class="formClr"><span id="component36" class="formNoError">Invalid Input</span></span></div>
-			<div class="formDescription"></div>
-		</li>
+		
 		<li class="rsform-block rsform-block-send">
 			<div class="formCaption2"></div>
-			<div class="formBody"><input type="submit" name="form[Send]" id="Send" class="rsform-submit-button" value="Send" /><span class="formClr"></span></div>
+			<div class="formBody">
+			<input type="submit" value="Submit">   <a href="http://www.freecontactform.com/email_form.php">Email Form</a>
+			
+			</div>
 			<div class="formDescription"></div>
 		</li>
 		<li class="rsform-block rsform-block-intake">
@@ -331,9 +324,16 @@ if (typeof jQuery !== 'undefined') {
 			<div class="formBody">Prior to your first visit please make sure to scroll down and download our client intake forms.<span class="formClr"></span></div>
 			<div class="formDescription"></div>
 		</li>
-		<input type="hidden" name="form[hiddenspace]" id="hiddenspace" value="" />
+		
 	</ol>
-</fieldset><input type="hidden" name="form[formId]" value="3"/></form></div>	                	</div>
+</fieldset>
+
+</form>
+
+
+
+
+</div>	                	</div>
                 	</div>
            </div>
 	
